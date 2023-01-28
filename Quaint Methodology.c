@@ -4,13 +4,13 @@
 // Merges two arrays into a third array
 void merge_two(int A[], int size_one, int B[], int size_two);
 // Sorts the merged array in chosen order
-void sort_merge(int C[], int final_size)                   
+void sort_merge(int C[], int final_size);                   
 // Swap value funtion.  
-void swap(int a, int b)  
- int main(void)
+void swap(int* a, int* b);
+int size_one, size_two, final_size; 
+int main(void)
 {
     int i,j; 
-    int size_one, size_two, final_size; 
     printf("Enter the size of the first array: \n");
     scanf("%d", &size_one);
     int A[size_one];
@@ -21,25 +21,24 @@ void swap(int a, int b)
     }
     printf("Enter the size of the second array: \n");
     scanf("%d", &size_two);
-    int B[size_two];
+    int B[size_two];  
     printf("Enter the elements of the second array: \n");
-    for(j=0;j<size_two;j++);
-    {
+    for(j=0;j<size_two;j++)
+    { 
         scanf("%d", &B[j]);
     }
     final_size = size_one + size_two;   
 
     printf("The merged array: \n");
     merge_two(A, size_one, B, size_two );
-    printf("In sorted order:\n");
-    sort_merge(C, final_size);
 return 0;
 }
-void merge_two(int A[], int size_one, int B[], int size_two);
+/*Driver Code*/
+void merge_two(int A[], int size_one, int B[], int size_two)
 {
     int i,j;
-    int C[final_size]= size_one +size_two;
-
+    final_size= size_one+size_two;
+    int C[final_size];
     // Copying elements from First array into FINAL array: 
     for(i=0;i<size_one;i++)
     {
@@ -64,12 +63,11 @@ void merge_two(int A[], int size_one, int B[], int size_two);
  * Preferably Selection sort technique.*
  ***************************************/
 
-void sort_merge(int C[], int final_size);
+void sort_merge(int C[], int final_size)
 {
     char command;
     printf("How do you want the array to be sorted?\n");
-    printf("Press 1 for Ascending order
-    ---     Press 2 for Descending order\n");
+    printf("Press 1 for Ascending order. Press 2 for Descending order\n");
     scanf("%c", &command);
     int i,j;
    if(command == '1');
@@ -112,10 +110,10 @@ if(command == '2');
     }
 }
 
-void swap(int a, int b);
+void swap(int* a, int* b)
 {
-    int temp=a;
-    a=b;
-    b=temp;
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
