@@ -10,7 +10,7 @@
 int check_anagram(char [], char []);
  
 int main()
-{
+{   
   char a[100], b[100];
  
   printf("Enter a string:");
