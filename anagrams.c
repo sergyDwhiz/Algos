@@ -56,4 +56,4 @@ int check_anagram(char a[], char b[])
   }
  
   return 1;
-}
+} 
