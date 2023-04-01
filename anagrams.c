@@ -7,7 +7,7 @@
                                                         */
 #include <stdio.h>
  
-int check_anagram(char [], char []);
+int check_anagram(char [], char []); 
  
 int main()
 {   
