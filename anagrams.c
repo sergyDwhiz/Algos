@@ -14,7 +14,6 @@ int main()
  
   printf("Enter a string:");
   gets(a);
- 
   printf("\nEnter a string:");
   gets(b);
  
