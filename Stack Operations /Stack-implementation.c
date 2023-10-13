@@ -13,14 +13,14 @@ void operations()
     printf("4. Check if stack is empty. \n");
     printf("5. Check if Stack is full. \n");
 }
-bool is_empty(int top) {
+bool is_empty() {
     if(top==-1){
         return true;
     }
     else 
     return false;
 }
-bool is_full(int top) {
+bool is_full() {
     if(top == MAX_SIZE-1){
         return true;
     }
@@ -28,15 +28,17 @@ bool is_full(int top) {
         return false;
 }
 void push(int val){
-    if(is_full){
+    if(is_full(top)){
         printf("** Stack Overflow ** \n Cannot push %d into the stack. \n", val);
     }
-    else 
-    top++;
-    STACK[top] = val;
+    else {
+        top++;
+        STACK[top] = val;
+    }
 }
-void pop(int val){
-    if(is_empty){
+int pop(){
+    int val;
+    if(is_empty(top)){
         printf("** Stack Underflow ** \n Cannot pop %d into the stack. \n", val);
     }
         val = STACK[top];
@@ -44,13 +46,55 @@ void pop(int val){
         printf("Popped item %d from the stack.\n", val);
         return val;
 }
-void peel() {
-    if (is_empty) {
+void peek() {
+    if (is_empty(top)) {
         printf("Stack Underflow. Cannot peel item.\n");
     } else {
         printf("Peeking item %d from the stack.\n", STACK[top]);
     }
 }
+int main(void){
+    int choice;
+    int val;
+    printf("Enter your choice:\n ");
+    scanf("%d", &choice);
+    switch (choice)
+    {
+    case 1:
+        printf("Enter the value to be pushed:\n ");
+        scanf("%d", &val);
+        push(val);
+        break;
+    
+    case 2: 
+        printf("Entert the value to be poped:\n ");
+        scanf("%d", &val);
+        pop(val);
+        break;
+    case 3: 
+        peek();
+        break;
+    case 4: 
+        if(is_empty(top)){
+            printf("Stack is empty\n");
+        } 
+        else{
+            printf("Stack is not empty\n");
+        }
+        break;
+    case 5: 
+        if(is_full(top)){
+            printf("Stack is Full");
+        }
+        else{
+            printf("Stack is not full\n");
+        }
+        break;
 
+    default:
+    break; 
+    } 
 
+  return 0;
+}
 
