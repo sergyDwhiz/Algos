@@ -66,10 +66,8 @@ int main(void){
         push(val);
         break;
     
-    case 2: 
-        printf("Entert the value to be poped:\n ");
-        scanf("%d", &val);
-        pop(val);
+    case 2:
+        pop(); 
         break;
     case 3: 
         peek();
