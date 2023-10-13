@@ -28,11 +28,29 @@ bool is_full(int top) {
         return false;
 }
 void push(int val){
-    if(is_full()){
-        printf("** Stack Overflow **");
+    if(is_full){
+        printf("** Stack Overflow ** \n Cannot push %d into the stack. \n", val);
     }
     else 
-    val = STACK[]
+    top++;
+    STACK[top] = val;
 }
+void pop(int val){
+    if(is_empty){
+        printf("** Stack Underflow ** \n Cannot pop %d into the stack. \n", val);
+    }
+        val = STACK[top];
+        top--;
+        printf("Popped item %d from the stack.\n", val);
+        return val;
+}
+void peel() {
+    if (is_empty) {
+        printf("Stack Underflow. Cannot peel item.\n");
+    } else {
+        printf("Peeking item %d from the stack.\n", STACK[top]);
+    }
+}
+
 
 
