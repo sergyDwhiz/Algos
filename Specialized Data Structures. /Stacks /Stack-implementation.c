@@ -54,6 +54,9 @@ void peek() {
     }
 }
 int main(void){
+   /* Unit Test variables. */
+//  int top = -1;
+//     int stack[10];
     int choice;
     int val;
     printf("Enter your choice:\n ");
@@ -65,13 +68,20 @@ int main(void){
         scanf("%d", &val);
         push(val);
         break;
+//     Test push function
+//     push(stack, &top, 5);
+//     assert(stack[top] == 5); 
     
     case 2:
         pop(); 
         break;
+//     Test pop function
+//     int val = pop(stack, &top);
+//     assert(val == 5);
     case 3: 
         peek();
         break;
+// No peek test case :)
     case 4: 
         if(is_empty(top)){
             printf("Stack is empty\n");
@@ -80,6 +90,9 @@ int main(void){
             printf("Stack is not empty\n");
         }
         break;
+//     Test is_empty function
+//     assert(is_empty(top) == 1);
+
     case 5: 
         if(is_full(top)){
             printf("Stack is Full");
@@ -88,11 +101,22 @@ int main(void){
             printf("Stack is not full\n");
         }
         break;
-
+//     Test is_full function
+//     assert(is_full(top) == 0);
     default:
     break; 
     } 
+    
 
+
+
+
+
+
+
+
+
+//     printf("All tests passed successfully!\n");
   return 0;
 }
 

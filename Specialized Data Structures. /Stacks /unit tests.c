@@ -7,7 +7,7 @@ int main() {
 
     // Test push function
     push(stack, &top, 5);
-    assert(stack[top] == 5);
+    assert(stack[top] == 5); 
 
     // Test pop function
     int val = pop(stack, &top);
