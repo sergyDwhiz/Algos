@@ -2,7 +2,8 @@
 #include<stdio.h>
 
 int SecondMininimum(int arr[], int size){
-    int min, secondmin = 214748364; // Largest interger value
+    int min = 214748364; // Largest interger value
+    int secondmin = 214748364; 
     for(int i = 0;i < size; i++ ){
     if(arr[i] < min){
         min = arr[i];
@@ -10,8 +11,8 @@ int SecondMininimum(int arr[], int size){
     else if(arr[i] < secondmin)
     {
         secondmin = arr[i];
-    }
-    } 
+    }}
+     
 return secondmin;
 }
 
