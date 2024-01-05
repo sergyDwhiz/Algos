@@ -8,7 +8,7 @@ int SecondMininimum(int arr[], int size){
     if(arr[i] < min){
         min = arr[i];
     }
-    else if(arr[i] < secondmin)
+    else if(arr[i] < secondmin && arr[i]>min)
     {
         secondmin = arr[i];
     }}
