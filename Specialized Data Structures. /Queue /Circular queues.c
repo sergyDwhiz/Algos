@@ -64,3 +64,26 @@ void display() {
         printf("\n Rear -> %d \n",rear);
     }
 }
+int main() {
+    // Display the initial state of the queue
+    display();
+
+    // Add some elements to the queue
+    enQueue(1);
+    enQueue(2);
+    enQueue(3);
+    enQueue(4);
+    enQueue(5);
+
+    // Display the queue after adding elements
+    display();
+
+    // Remove an element from the queue
+    deQueue();
+
+    // Display the queue after removing an element
+    display();
+
+    return 0;
+}
+
