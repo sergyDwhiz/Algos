@@ -1,8 +1,8 @@
 // Implements a Last In First Out Data Structure in C 
 //### Operations: 
-#include<stdio.h>
+#include<stdio.h> 
 #include<stdbool.h>
-#define MAX_SIZE 100
+#define MAX_SIZE 100 // OR int MAX_SIZE[100];   
 int top=-1;
 int STACK[MAX_SIZE];
 void operations()
@@ -21,14 +21,14 @@ bool is_empty() {
     return false;
 }
 bool is_full() {
-    if(top == MAX_SIZE-1){
+    if(top == MAX_SIZE-1){ 
         return true;
     }
     else 
         return false;
 }
 void push(int val){
-    if(is_full(top)){
+    if(is_full(top)){ 
         printf("** Stack Overflow ** \n Cannot push %d into the stack. \n", val);
     }
     else {
@@ -102,7 +102,7 @@ int main(void){
         }
         break;
 //     Test is_full function
-//     assert(is_full(top) == 0);
+//     assert(is_full(top) == 0); 
     default:
     break; 
     } 
