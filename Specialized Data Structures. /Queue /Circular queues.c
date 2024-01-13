@@ -2,15 +2,15 @@
 #define SIZE 5
 
 int items[SIZE];
-int front = -1, rear =-1;
+int front = -1, rear =-1, count = 0;
 
 int isFull() {
-    if((front == rear + 1) || (front == 0 && rear == SIZE - 1)) return 1;
+    if(count == SIZE) return 1;
     return 0;
 }
 
 int isEmpty() {
-    if(front == -1) return 1;
+    if(count == 0) return 1;
     return 0;
 }
 
@@ -20,6 +20,7 @@ void enQueue(int element) {
         if(front == -1) front = 0;
         rear = (rear + 1) % SIZE;
         items[rear] = element;
+        count++;
         printf("\n Inserted -> %d", element);
     }
 }
@@ -39,6 +40,7 @@ int deQueue() {
             front = (front + 1) % SIZE;
             
         }
+        count--;
         printf("\n Deleted element -> %d \n", element);
         return(element);
     }
