@@ -48,7 +48,7 @@ void bubblesort_ascend(int Array[], int array_size)
                   swapped=true; 
             }
         }
-        if(swapped = false) // No swapping peroformed by inner loop. 
+        if(swapped == false) // No swapping peroformed by inner loop. 
         {
             break;
         }
