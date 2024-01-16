@@ -21,18 +21,18 @@ node* getnode()
 // Creating a singly with 'n' number of nodes
 void createlist(int n){
     int i; 
-    node* newnode;
-    node* temp;
-    for(i=0;i<n;i++)
+    node* newnode;  // var for creating a new node
+    node* temp;    // Temporal var for holding the first node
+    for(i=0;i<n;i++)   
     {
-        if(start==NULL){
-            start =  newnode;
+        if(start==NULL){  // If list is empty
+            start =  newnode;   // Make the new node the start node
         }
         else{
-            temp = start;
-            while(temp-> next!=NULL)
-            temp =  temp -> next;
-            temp -> next= newnode;
+            temp = start;  // Make a temporary node to traverse the list
+            while(temp-> next!=NULL) // Traverse the list until the last node
+            temp =  temp -> next;  // Make the temporary node the last node
+            temp -> next= newnode; // Add the new node to the end of the list
         }
     }
 }
@@ -40,11 +40,22 @@ void createlist(int n){
 void inserbeg(int n){
     node* newnode;
     newnode = getnode();
-    if(start == NULL){
-        start = newnode;
+    if(start == NULL){ // If list is empty
+        start = newnode;  // Make the new node the start node
     }
     else{
-        newnode->next = start;
-        start = newnode;
+        newnode->next = start; // Set the next pointer of newnode to the curent start node
+        start = newnode; // Make the new node the first node
     }
     } 
+
+    void inserbeg(int n){
+        node* newnode;
+        newnode = getnode();
+        if(start == NULL){
+            start = newnode;
+        } else{
+            newnode->next=start;
+            start = newnode;
+        }
+    }
