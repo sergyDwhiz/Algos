@@ -161,3 +161,30 @@ void inserbeg(int n){
             }
         }
     }
+    void search(){
+        node* temp;
+        int item, i=0, flag;
+        temp = start;
+        if(temp==NULL){
+            printf("List is empty\n");
+        }
+        else{
+            printf("Enter the item to be searched: \n");
+            scanf("%d", &item);
+            while(temp!=NULL){
+                if(temp->data==item){
+                    printf("Item found at location %d\n", i+1);
+                    flag = 0;
+                    break;
+                }
+                else{
+                    flag = 1;
+                }
+                i++;
+                temp = temp->right;
+            }
+            if(flag==1){
+                printf("Item not found\n");
+            }
+        }
+    }
