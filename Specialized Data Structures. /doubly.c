@@ -148,3 +148,16 @@ void inserbeg(int n){
             free(temp);
         }
     }
+    void display(){
+        node* temp;
+        if(start==NULL){
+            printf("List is empty\n");
+        }
+        else{
+            temp = start;
+            while(temp!=NULL){
+                printf("%d\t", temp->data);
+                temp = temp->right;
+            }
+        }
+    }
