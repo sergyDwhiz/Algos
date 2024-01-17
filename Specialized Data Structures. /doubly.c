@@ -110,3 +110,17 @@ void inserbeg(int n){
             free(temp);
         }
     }
+    void deleteend(){
+        node* temp;
+        if(start==NULL){
+            printf("List is empty\n");
+        }
+        else{
+            temp = start;
+            while(temp->right!=NULL){
+                temp = temp->right;
+            }
+            temp->left->right = NULL;
+            free(temp);
+        }
+    }
