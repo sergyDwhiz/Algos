@@ -200,3 +200,45 @@ void inserbeg(int n){
             temp = temp->left;
         }
     }
+    void main(){
+        int n, ch;
+        printf("Enter the number of nodes: \n");
+        scanf("%d", &n);
+        createlist(n);
+        while(1){
+            printf("\n1. Insert at beginning\n");
+            printf("2. Insert at end\n");
+            printf("3. Insert at a position\n");
+            printf("4. Delete at beginning\n");
+            printf("5. Delete at end\n");
+            printf("6. Delete at a position\n");
+            printf("7. Display\n");
+            printf("8. Search\n");
+            printf("9. Reverse\n");
+            printf("10. Exit\n");
+            printf("Enter your choice: \n");
+            scanf("%d", &ch);
+            switch(ch){
+                case 1: inserbeg(n);
+                        break;
+                case 2: inserend(n);
+                        break;
+                case 3: insertpos(n);
+                        break;
+                case 4: deletebeg();
+                        break;
+                case 5: deleteend();
+                        break;
+                case 6: deletepos();
+                        break;
+                case 7: display();
+                        break;
+                case 8: search();
+                        break;
+                case 9: reverse();
+                        break;
+                case 10: exit(0);
+                default: printf("Invalid choice\n");
+            }
+        }
+    }
