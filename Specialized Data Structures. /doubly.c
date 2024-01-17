@@ -98,3 +98,15 @@ void inserbeg(int n){
             temp->right = newnode;
         }
     }
+    void deletebeg(){
+        node* temp;
+        if(start==NULL){
+            printf("List is empty\n");
+        }
+        else{
+            temp = start;
+            start = start->right;
+            start->left = NULL;
+            free(temp);
+        }
+    }
