@@ -124,3 +124,27 @@ void inserbeg(int n){
             free(temp);
         }
     }
+    void deletepos(){
+        node* temp;
+        int pos, i;
+        printf("Enter the position: \n");
+        scanf("%d", &pos);
+        if(pos==1){
+            deletebeg();
+        }
+        else{
+            temp = start;
+            for(i=1;i<pos;i++){
+                temp = temp->right;
+                if(temp==NULL){
+                    printf("There are less than %d elements in the list\n", pos);
+                    return;
+                }
+            }
+            temp->left->right = temp->right;
+            if(temp->right!=NULL){
+                temp->right->left = temp->left;
+            }
+            free(temp);
+        }
+    }
