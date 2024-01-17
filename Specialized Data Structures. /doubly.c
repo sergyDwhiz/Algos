@@ -188,3 +188,15 @@ void inserbeg(int n){
             }
         }
     }
+    void reverse(){
+        node* temp;
+        temp = start;
+        while(temp->right!=NULL){
+            temp = temp->right;
+        }
+        printf("Reverse: \n");
+        while(temp!=NULL){
+            printf("%d\t", temp->data);
+            temp = temp->left;
+        }
+    }
