@@ -59,3 +59,132 @@ void inserbeg(int n){
             start = newnode;
         }
     }
+    void inserend(int n){
+        node* newnode;
+        node* temp;
+        newnode = getnode();
+        if(start == NULL){
+            start = newnode;
+        }
+        else{
+            temp = start;
+            while(temp->next!=NULL){
+                temp = temp->next;
+                temp-> next = newnode;
+            }
+        }
+    }
+ // Insert an element at an arbitary position
+    void insert_at_mid(){
+        node *prev, *newnode, *temp;
+        int pos, nodectr, ctr=1;
+        newnode = getnode();
+        printf("Enter the position:\n");
+        scanf("%d", &pos);
+        nodectr = startnode(start);
+        if(pos>1 && pos<nodectr){
+            temp = prev = start;
+            while (ctr<pos)
+            {
+                prev = temp;
+                temp = temp -> next;
+                ctr++;
+            }
+            prev-> next = newnode;
+            newnode -> next = temp;
+        }
+        else{
+            printf("Position %d is not at middle position\n", pos);
+        }
+
+    }
+    // Delete an Element at the begining of Node. (Also called First or Head Node.)
+    void delbeg(){
+        node* temp;
+        if(start == NULL){
+            printf("\n No nodes exist\n");
+            return;
+        }
+        else{
+            temp = start; 
+            start = temp-> next;
+            free(temp);
+            printf("\n Node deleted");
+        }
+    }
+    // Delete Elt at End (Tail Node.)
+    void del_last(){
+        node* temp, *prev;
+        if(start == NULL){
+            printf("List is empty\n");
+            return;
+        }
+        else{
+            temp = start;
+            prev = start; 
+            while(temp->next!=NULL)
+            {
+                prev = temp;
+                temp = temp -> next;
+            }
+            prev-> next = NULL;
+            free(temp);
+            printf("Node deleted\n");
+        }
+    }
+    //Delete an arbitary Node. 
+    void del_at_mid(){
+        int ctr =1, pos, nodectr;
+        node *temp, *prev;
+        if(start == NULL)
+        {
+            printf("Empty List\n");
+            return;
+        }
+        else{
+            printf("Enter pos of node to delete\n");
+            scanf("%d", &pos);
+            nodectr = countnode(start);
+            if(pos>nodectr){
+                printf("Position doesn't exist\n");
+            } if(pos >1 && pos <nodectr){
+                temp = prev = start;
+                while (ctr<pos){
+                    prev= temp;
+                    temp = temp -> next; 
+                    ctr++;
+                }    
+                prev-> next = temp-> next;
+                free(temp);
+                printf("Node Deleted\n");
+            }
+            else{
+                printf("\n Invalid Option\n");
+                getch();
+            }
+        }
+    }
+    // Traverse the List from L -> R
+    void traverse()
+    {
+        node *temp;
+        temp = start;
+        printf("\n The contents of List (Left to Right):\n"); 
+        if(start == NULL )
+        printf("\n Empty List");
+        else{
+        while (temp != NULL)
+            {
+            printf("%d ->", temp -> data);
+            temp=temp-> data;
+            }
+            }
+            printf("X");
+            // Count number of Nodes: 
+            void countnodes(node* st){
+                if(st == NULL){
+                    return 0;
+                }else{
+                    return (1+countnodes(st-> next));
+                }
+            }
