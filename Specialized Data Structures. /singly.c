@@ -2,14 +2,15 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-// Create a Node
+// Create a Node struct
 
 struct slinklist{
     int data;
     struct slinklist* next;
 };
 typedef struct slinklist node;
-node* start = NULL;
+node *start = NULL;
+// Create a Node
 node* getnode()
 {
     node* newnode = (node*) malloc(sizeof(node));
