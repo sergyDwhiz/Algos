@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h> 
+
 #define SIZE 5
 
 int items[SIZE];
