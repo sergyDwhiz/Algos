@@ -15,7 +15,7 @@ void two_sum(int numbers[], int length, int target) {
             return;
         }
     }
-    printf("No two sum solution\n");
+    printf("No two sum solution\n"); // Null status
 }
 
 // Driver code
