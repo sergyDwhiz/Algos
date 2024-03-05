@@ -242,3 +242,6 @@ void inserbeg(int n){
             }
         }
     }
+
+
+
