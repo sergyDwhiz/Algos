@@ -10,11 +10,11 @@ int compare(const void* a, const void* b) {
 // Find the kth largest element in an array
 int findKthLargest(int* nums, int numsSize, int k) {
     qsort(nums, numsSize, sizeof(int), compare);  // Sort the array in descending order
-    return nums[k-1];  // Return the kth largest element
+    return nums[k-1];
 }
 
 int main() {
-    int nums[] = {3,2,1,5,6,4};  // Define the array
+    int nums[] = {3,2,1,5,6,4};
     int numsSize = sizeof(nums) / sizeof(nums[0]);  // Calculate the size of the array
     int k = 2;  // Define k
     printf("%d\n", findKthLargest(nums, numsSize, k));  // Print the kth largest element
