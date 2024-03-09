@@ -1,30 +1,29 @@
 # Algos: A Comprehensive Collection of C Algorithms
 
-This repository is a collection of basic C algorithms designed for programmers of all levels of expertise. It includes a variety of algorithms related to searching, sorting, merging, and graph theory.
+[![GitHub stars](https://img.shields.io/github/stars/Sergius-Nyah/Algos.svg?style=social&label=Star)](https://github.com/Sergius-Nyah/Algos) [![GitHub forks](https://img.shields.io/github/forks/Sergius-Nyah/Algos.svg?style=social&label=Fork)](https://github.com/Sergius-Nyah/Algos/fork) [![GitHub watchers](https://img.shields.io/github/watchers/Sergius-Nyah/Algos.svg?style=social&label=Watch)](https://github.com/Sergius-Nyah/Algos) [![GitHub followers](https://img.shields.io/github/followers/Sergius-Nyah.svg?style=social&label=Follow)](https://github.com/Sergius-Nyah)
 
-## Features
+<h2> Welcome Aboard! </h2>This repository is a collection of basic C algorithms designed for programmers of all levels of expertise. It includes a variety of algorithms related to searching, sorting, merging, graph theory, and much more.
 
-- **Searching Algorithms:** Find the most efficient way to search for data in different structures.
-- **Sorting Algorithms:** Learn about different methods to sort data in ascending or descending order.
-- **Merging Algorithms:** Understand how to combine different datasets into one.
-- **Graph Algorithms:** (Coming soon!)
+Its mission is to hack Algorithms in C into the core skill set of every C aficionado, embodying the true hacker spirit.
 
 ## Contributing
-I welcome contributions from everyone. Whether you're a seasoned C programmer or a beginner looking to learn and contribute, your PRs are highly appreciated. 
+
+<h3>All hands on deck! </h3>:raised_hands: Contributions are welcomed from everyone. Whether you're a seasoned C programmer or a beginner looking to learn and contribute, your PRs are highly appreciated.
 
 ## Getting Started
 
-To get started with this project:
+<h3> Ready to Sail? </h3>
 
 1. Clone the repository: `git clone https://github.com/Sergius-Nyah/Algos.git`
 2. Navigate into the directory: `cd Algos`
 3. Compile the desired file: `gcc filename.c -o outputfile`
-4. Run the file: `./outputfile`
-
+4. Test your change: `./outputfile`
+5. Now, Rest! You've played your part. Give yourself a warm pad on the back and wait for your PR to be merged. `Ciao:)`
 
 ## Contact
 
-If you have any questions, feel free to open an issue or contact me directly at [my email](sergiusnyah@gmail.com)
+Got any questions, feel free to open an issue or contact me directly at [my email](sergiusnyah@gmail.com)
 
+[![GitHub issues](https://img.shields.io/github/issues/Sergius-Nyah/Algos.svg)](https://github.com/Sergius-Nyah/Algos/issues) [![GitHub issues-closed](https://img.shields.io/github/issues-closed/Sergius-Nyah/Algos.svg)](https://github.com/Sergius-Nyah/Algos/issues?q=is%3Aissue+is%3Aclosed)
 
-Happy Coding!
+Happy Coding, folks!
