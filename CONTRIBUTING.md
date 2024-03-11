@@ -27,9 +27,8 @@ The process for submitting pull requests is as follows:
 
 1. Fork the repository and create your branch from `master`.
 2. If you've added code that should be tested, add tests.
-3. Ensure the test suite passes.3. If you've changed APIs, update the documentation.
-4. Make sure your code lints.
-5. Issue that pull request!
+3. Make sure your code lints.
+4. Issue that pull request!
 
 ## Styleguides
 
